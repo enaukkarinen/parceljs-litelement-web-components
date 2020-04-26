@@ -16,8 +16,10 @@ export class EdHeader extends LitElement {
         .header {
           position: relative;
           height: 70vh;
+        }
 
-          @media (min-width: 600px) {
+        @media (min-width: 600px) {
+          .header {
             height: 900px;
           }
         }
