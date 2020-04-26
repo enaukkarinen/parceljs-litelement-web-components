@@ -1,0 +1,6 @@
+{
+  "htmlWhitespaceSensitivity": "css",
+  "trailingComma": "none",
+  "singleQuote": true,
+  "printWidth": 140
+}

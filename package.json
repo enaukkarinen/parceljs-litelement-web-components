@@ -1,0 +1,22 @@
+{
+  "name": "parceljs-ts-webcomponents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "parcel src/index.html",
+    "prod": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@polymer/lit-element": "^0.7.1"
+  }
+}

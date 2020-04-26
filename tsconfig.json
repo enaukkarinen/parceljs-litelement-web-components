@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "typeRoots": ["node_modules/@types"],
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "target": "ES6"
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}
