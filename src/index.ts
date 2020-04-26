@@ -1,4 +1,7 @@
+// import './typings.d.ts';
 import './styles/main.scss';
+
+import './components/header';
 
 import { LitElement, html, customElement, property } from '@polymer/lit-element';
 

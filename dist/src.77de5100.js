@@ -3701,7 +3701,88 @@ LitElement.finalized = true;
  */
 
 LitElement.render = _shadyRender.render;
-},{"lit-html":"../node_modules/lit-html/lit-html.js","lit-html/lib/shady-render":"../node_modules/lit-html/lib/shady-render.js","./lib/updating-element.js":"../node_modules/@polymer/lit-element/lib/updating-element.js","./lib/decorators.js":"../node_modules/@polymer/lit-element/lib/decorators.js","lit-html/lit-html":"../node_modules/lit-html/lit-html.js","./lib/css-tag.js":"../node_modules/@polymer/lit-element/lib/css-tag.js"}],"index.ts":[function(require,module,exports) {
+},{"lit-html":"../node_modules/lit-html/lit-html.js","lit-html/lib/shady-render":"../node_modules/lit-html/lib/shady-render.js","./lib/updating-element.js":"../node_modules/@polymer/lit-element/lib/updating-element.js","./lib/decorators.js":"../node_modules/@polymer/lit-element/lib/decorators.js","lit-html/lit-html":"../node_modules/lit-html/lit-html.js","./lib/css-tag.js":"../node_modules/@polymer/lit-element/lib/css-tag.js"}],"assets/header.png":[function(require,module,exports) {
+module.exports = "/header.7b7ef178.png";
+},{}],"components/header.ts":[function(require,module,exports) {
+"use strict";
+
+var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
+  var c = arguments.length,
+      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+      d;
+  if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+const lit_element_1 = require("@polymer/lit-element");
+
+const header_png_1 = __importDefault(require("../assets/header.png"));
+
+let EdHeader = class EdHeader extends lit_element_1.LitElement {
+  static get styles() {
+    return [lit_element_1.css`
+        .header {
+          position: relative;
+          height: 900px;
+        }
+
+        .hero {
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+
+          border-bottom-left-radius: 6vw;
+          margin-left: 4vw;
+        }
+
+        .hero-image {
+          position: absolute;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          transform: translateX(-50%);
+          left: 50%;
+
+          animation: focus 0.4s ease-in;
+          animation-play-state: running;
+        }
+
+        .box-shadow {
+          border-bottom-left-radius: 6vw;
+          box-shadow: inset 11px -12px 30px -10px rgba(0, 0, 0, 0.35);
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          z-index: 2;
+        }
+      `];
+  }
+
+  render() {
+    return lit_element_1.html`
+      <div class="header">
+        <div class="hero" #hero>
+          <div class="box-shadow"></div>
+          <img class="hero-image" src="${header_png_1.default}" />
+        </div>
+      </div>
+    `;
+  }
+
+};
+EdHeader = __decorate([lit_element_1.customElement('ed-header')], EdHeader);
+exports.EdHeader = EdHeader;
+},{"@polymer/lit-element":"../node_modules/@polymer/lit-element/lit-element.js","../assets/header.png":"assets/header.png"}],"index.ts":[function(require,module,exports) {
 "use strict";
 
 var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
@@ -3714,9 +3795,11 @@ var __decorate = this && this.__decorate || function (decorators, target, key, d
 
 Object.defineProperty(exports, "__esModule", {
   value: true
-});
+}); // import './typings.d.ts';
 
 require("./styles/main.scss");
+
+require("./components/header");
 
 const lit_element_1 = require("@polymer/lit-element");
 /**
@@ -3753,7 +3836,7 @@ __decorate([lit_element_1.property()], MyElement.prototype, "foo", void 0);
 
 MyElement = __decorate([lit_element_1.customElement('my-element')], MyElement);
 exports.MyElement = MyElement;
-},{"./styles/main.scss":"styles/main.scss","@polymer/lit-element":"../node_modules/@polymer/lit-element/lit-element.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./styles/main.scss":"styles/main.scss","./components/header":"components/header.ts","@polymer/lit-element":"../node_modules/@polymer/lit-element/lit-element.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -3781,7 +3864,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58633" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50951" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

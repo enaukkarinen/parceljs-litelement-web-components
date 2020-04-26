@@ -17,6 +17,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@polymer/lit-element": "^0.7.1"
+    "@polymer/lit-element": "^0.7.1",
+    "assets": "^3.0.1"
   }
 }
