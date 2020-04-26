@@ -1,5 +1,5 @@
 // import './typings.d.ts';
-import './styles/main.scss';
+import './styles/main.css';
 
 import './components/header';
 

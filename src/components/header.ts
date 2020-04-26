@@ -1,15 +1,25 @@
 import { LitElement, html, customElement, TemplateResult, css, CSSResult } from '@polymer/lit-element';
 
-import image from '../assets/header.png';
+import image from '../assets/header.jpg';
 
 @customElement('ed-header')
 export class EdHeader extends LitElement {
+  imageOffset = 0;
+
+  constructor() {
+    super();
+  }
+
   static get styles(): CSSResult[] {
     return [
       css`
         .header {
           position: relative;
-          height: 900px;
+          height: 70vh;
+
+          @media (min-width: 600px) {
+            height: 900px;
+          }
         }
 
         .hero {
@@ -50,9 +60,36 @@ export class EdHeader extends LitElement {
       <div class="header">
         <div class="hero" #hero>
           <div class="box-shadow"></div>
-          <img class="hero-image" src="${image}" />
+          <img class="hero-image" src="${image}" style="top: ${this.imageOffset}px" />
         </div>
       </div>
     `;
+  }
+
+  firstUpdated() {
+    this.addEventListener('click', (evt) => {
+      console.log(evt);
+    });
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    document.addEventListener('scroll', () => this.handleScroll());
+  }
+
+  disconnectedCallback() {
+    document.removeEventListener('scroll', () => this.handleScroll());
+    super.disconnectedCallback();
+  }
+
+  handleScroll(): void {
+    const verticalOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.imageOffset = verticalOffset / 5;
+    this.performUpdate();
+  }
+
+  async performUpdate() {
+    await new Promise((resolve) => requestAnimationFrame(() => resolve()));
+    super.performUpdate();
   }
 }

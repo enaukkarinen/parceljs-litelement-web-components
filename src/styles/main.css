@@ -1,12 +1,14 @@
-// Indie Flower 400
-// Raleway 400
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway&display=swap');
 
+:root {
+  --main-bg-color: #d0f2ff;
+}
 
 body {
   padding: 0;
   margin: 0;
   font-family: 'Indie Flower', cursive;
+  background: var(--main-bg-color);
 }
 
 .indie-flower {
