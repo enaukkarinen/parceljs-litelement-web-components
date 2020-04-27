@@ -14,6 +14,10 @@ export class EdHeader extends LitElement {
   static get styles(): CSSResult[] {
     return [
       css`
+        :host {
+          display: block;
+        }
+
         .header {
           position: relative;
           height: 70vh;

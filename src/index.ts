@@ -2,6 +2,7 @@
 import './styles/main.css';
 
 import './components/header';
+import './components/intro';
 
 import { LitElement, html, customElement, property } from '@polymer/lit-element';
 

@@ -29,12 +29,12 @@ section {
   margin: 3rem 0;
 }
 
-.intro-section {
+/* .intro-section {
   font-size: 1.75rem;
   text-align: center;
   font-style: italic;
   position: relative;
-}
+} */
 
 .intro-overlay {
   position: absolute;
