@@ -1,6 +1,7 @@
 import { LitElement, html, customElement, TemplateResult, css, CSSResult } from '@polymer/lit-element';
 
-import image from '../assets/header.jpg';
+import headerImage from '../assets/header.jpg';
+import profileImage from '../assets/granny-5.jpg';
 
 @customElement('ed-header')
 export class EdHeader extends LitElement {
@@ -16,12 +17,7 @@ export class EdHeader extends LitElement {
         .header {
           position: relative;
           height: 70vh;
-        }
-
-        @media (min-width: 600px) {
-          .header {
-            height: 900px;
-          }
+          padding-bottom: 3rem;
         }
 
         .hero {
@@ -53,6 +49,54 @@ export class EdHeader extends LitElement {
           position: absolute;
           z-index: 2;
         }
+
+        .face-card {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+
+          width: 180px;
+          height: 222px;
+          background: #ecfffc;
+
+          z-index: 3;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+          overflow: hidden;
+          display: flex;
+          flex-flow: column;
+        }
+
+        @media (min-width: 600px) {
+          .face-card {
+            left: 12vw;
+            transform: unset;
+          }
+        }
+
+        .face-card__image-container {
+          flex: 1;
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .face-card__image {
+          object-fit: contain;
+          width: 100%;
+          clip-path: circle(44%);
+          height: 100%;
+        }
+
+        .face-card__name {
+          height: 3rem;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          font-size: 24px;
+        }
       `
     ];
   }
@@ -62,7 +106,14 @@ export class EdHeader extends LitElement {
       <div class="header">
         <div class="hero" #hero>
           <div class="box-shadow"></div>
-          <img class="hero-image" src="${image}" style="top: ${this.imageOffset}px" />
+          <img class="hero-image" src="${headerImage}" style="top: ${this.imageOffset}px" />
+        </div>
+
+        <div class="face-card">
+          <div class="face-card__image-container">
+            <img class="face-card__image" src="${profileImage}" />
+          </div>
+          <div class="face-card__name">Tirveni</div>
         </div>
       </div>
     `;

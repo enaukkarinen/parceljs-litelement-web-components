@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway&display=swap');
 
 :root {
-  --main-bg-color: #d0f2ff;
+  --main-bg: #d0f2ff;
+  --secondary-bg: #ecfffc;
+  --main-color:  #4450b0;
 }
 body {
   padding: 0;
   margin: 0;
   font-family: 'Indie Flower', cursive;
-  background: var(--main-bg-color);
+  background: var(--main-bg);
+  color: var(--main-color);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .indie-flower {
@@ -16,4 +23,36 @@ body {
 
 .raleway {
   font-family: 'Raleway', sans-serif;
+}
+
+section {
+  margin: 3rem 0;
+}
+
+.intro-section {
+  font-size: 1.75rem;
+  text-align: center;
+  font-style: italic;
+  position: relative;
+}
+
+.intro-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/pattern.png');
+  background-size: 200%;
+  opacity: .33;
+}
+
+.intro-text {
+  padding: 2rem;
+  background: var(--secondary-bg);
+}
+
+@media (min-width: 600px) {
+  .intro-text {
+    padding: 4rem;
+  }
 }
