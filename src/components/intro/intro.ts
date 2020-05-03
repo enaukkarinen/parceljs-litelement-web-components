@@ -1,14 +1,9 @@
 import { LitElement, html, customElement, TemplateResult, css, CSSResult } from '@polymer/lit-element';
 
-import pattern from '../assets/pattern.png';
+import pattern from '../../assets/pattern.png';
 
 @customElement('ed-intro')
 export class EdIntro extends LitElement {
-  imageOffset = 0;
-
-  constructor() {
-    super();
-  }
 
   static get styles(): CSSResult[] {
     return [

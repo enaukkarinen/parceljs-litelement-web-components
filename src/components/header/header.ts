@@ -1,7 +1,7 @@
 import { LitElement, html, customElement, TemplateResult, css, CSSResult } from '@polymer/lit-element';
 
-import headerImage from '../assets/header.jpg';
-import profileImage from '../assets/granny-5.jpg';
+import headerImage from '../../assets/header.jpg';
+import profileImage from '../../assets/granny-5.jpg';
 
 @customElement('ed-header')
 export class EdHeader extends LitElement {
@@ -65,8 +65,7 @@ export class EdHeader extends LitElement {
           background: #ecfffc;
 
           z-index: 3;
-          border-top-left-radius: 4px;
-          border-top-right-radius: 4px;
+          border-radius: 1rem;
           overflow: hidden;
           display: flex;
           flex-flow: column;
