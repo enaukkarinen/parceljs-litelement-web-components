@@ -47,6 +47,17 @@ export class EdMain extends LitElement {
         :host {
           display: block;
         }
+
+        h1 {
+          text-align: center;
+          font-size: 2rem;
+          text-decoration: underline;
+          margin-bottom: 0;
+        }
+
+        section {
+          margin: 3rem 0;
+        }
       `
     ];
   }
@@ -60,7 +71,7 @@ export class EdMain extends LitElement {
       </section>
 
       <section>
-        <h2>Pictures</h2>
+        <h1>Pictures</h1>
         <ed-gallery items="${JSON.stringify(this.galleryItems)}"></ed-gallery>
       </section>
 
