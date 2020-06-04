@@ -1,7 +1,7 @@
 import { LitElement, html, customElement, TemplateResult, CSSResult, property } from '@polymer/lit-element';
 
 import styles from './gallery.css';
-import materialIcons from '../../styles/material-icons';
+import closeIcon from '../../assets/close-icon.svg';
 
 export interface GalleryItem {
   url: string;
@@ -13,34 +13,39 @@ export interface GalleryItem {
 export class EdGallery extends LitElement {
   @property({ type: Array }) items: GalleryItem[] = [];
 
-  // images = [image2, image7, image8, image11];
+  activeImageUrl?: string;
 
   static get styles(): CSSResult[] {
-    return [styles, materialIcons];
+    return [styles];
   }
 
   open(item: GalleryItem): void {
     const el = this.shadowRoot.getElementById('modal');
-    const body = document.getElementsByTagName('body');
-
-    body[0].style.overflow = 'hidden';
+    // const body = document.getElementsByTagName('body');
+    // body[0].style.overflow = 'hidden';
+    this.activeImageUrl = item.url;
+    this.performUpdate();
     el.style.display = 'block';
   }
 
   close(): void {
     const el = this.shadowRoot.getElementById('modal');
-    const body = document.getElementsByTagName('body');
-
+    // const body = document.getElementsByTagName('body');
+    // body[0].style.overflow = 'unset';
     el.style.display = 'none';
-    body[0].style.overflow = 'unset';
     el.focus();
+
+    this.activeImageUrl = undefined;
   }
 
   render(): TemplateResult {
     return html`
       <div id="modal" @click="${() => this.close()}">
-        <i class="close-btn material-icons">close</i>
-
+        <div class="modal-backdrop"></div>
+        <img class="modal-close-icon" src="${closeIcon}" />
+        <div class="modal-content">
+          <img src="${this.activeImageUrl}" />
+        </div>
         use custom svgs
       </div>
       <div class="gallery">
@@ -56,5 +61,10 @@ export class EdGallery extends LitElement {
         })}
       </div>
     `;
+  }
+
+  async performUpdate() {
+    await new Promise((resolve) => requestAnimationFrame(() => resolve()));
+    super.performUpdate();
   }
 }

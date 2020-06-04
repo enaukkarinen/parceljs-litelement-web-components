@@ -59,8 +59,34 @@ export default css`
     top: 0;
     width: 100vw;
     height: 100vh;
+  }
+
+  .modal-backdrop {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     background: black;
     opacity: 0.4;
+  }
+
+  .modal-close-icon {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    width: 40px;
+  }
+
+  .modal-content {
+    position: relative;
+    margin: 4rem;
+    padding: 2rem;
+    background: floralwhite;
+
+
+    img {
+      max-width: 60%;
+      max-height: 100%;
+    }
   }
 
   .close-btn {

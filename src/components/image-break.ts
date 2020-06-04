@@ -4,8 +4,6 @@ import { LitElement, html, customElement, TemplateResult, css, CSSResult, proper
 export class EdImageBreak extends LitElement {
   @property({ type: String }) prop1 = '';
 
-  @property({ type: String }) text = '';
-
   static get styles(): CSSResult[] {
     return [
       css`
@@ -21,6 +19,22 @@ export class EdImageBreak extends LitElement {
           justify-content: center;
           align-items: center;
           font-size: 2rem;
+          position: relative;
+        }
+        .backdrop {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          background: #0000002e;
+        }
+        span {
+          position: relative;
+          background: #e6f8ff;
+          width: 70vw;
+          padding: 1rem;
+          border-radius: 1rem;
+          text-align: center;
         }
       `
     ];
@@ -34,7 +48,8 @@ export class EdImageBreak extends LitElement {
         }
       </style>
       <div class="image-break">
-        <span>${this.text}</span>
+        <div class="backdrop"></div>
+        <slot></slot>
       </div>
     `;
   }
