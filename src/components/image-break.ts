@@ -2,7 +2,7 @@ import { LitElement, html, customElement, TemplateResult, css, CSSResult, proper
 
 @customElement('ed-image-break')
 export class EdImageBreak extends LitElement {
-  @property({ type: String }) prop1 = '';
+  @property({ type: String }) backgroundUrl = '';
 
   static get styles(): CSSResult[] {
     return [
@@ -12,6 +12,7 @@ export class EdImageBreak extends LitElement {
           height: 800px;
           background-size: cover;
           background-attachment: fixed;
+          background-position: center;
 
           box-shadow: inset 11px -12px 30px -10px rgba(0, 0, 0, 0.35), inset 11px 12px 30px -10px rgba(0, 0, 0, 0.35);
 
@@ -44,7 +45,7 @@ export class EdImageBreak extends LitElement {
     return html`
       <style>
         .image-break {
-          background: url('${this.prop1}');
+          background: url('${this.backgroundUrl}');
         }
       </style>
       <div class="image-break">
