@@ -36,17 +36,18 @@ export class EdGallery extends LitElement {
     el.focus();
 
     this.activeImageUrl = undefined;
+
+    this.performUpdate();
   }
 
   render(): TemplateResult {
     return html`
-      <div id="modal" @click="${() => this.close()}">
+      <div id="modal" @click="${this.close}">
         <div class="modal-backdrop"></div>
         <img class="modal-close-icon" src="${closeIcon}" />
-        <div class="modal-content">
-          <img src="${this.activeImageUrl}" />
+        <div class="modal-container">
+          <img class="modal-img" src="${this.activeImageUrl}" />
         </div>
-        use custom svgs
       </div>
       <div class="gallery">
         ${this.items.map((item) => {

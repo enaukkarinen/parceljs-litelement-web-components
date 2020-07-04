@@ -51,15 +51,44 @@ export default css`
     background: var(--secondary-bg);
   }
 
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(0.85);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
   #modal {
     display: none;
     cursor: pointer;
     position: fixed;
+    z-index: 100;
     top: 0;
     width: 100vw;
     height: 100vh;
+
+    animation: fadeIn;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
   }
 
+  .modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
   .modal-backdrop {
     position: absolute;
     width: 100vw;
@@ -75,16 +104,20 @@ export default css`
     width: 40px;
   }
 
-  .modal-content {
+  .modal-img {
     position: relative;
-    margin: 4rem;
-    padding: 2rem;
-    background: floralwhite;
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
 
-    img {
-      max-width: 60%;
-      max-height: 100%;
-    }
+    max-height: 80vh;
+
+    border: 8px solid;
+    border-radius: 8px;
+    animation: grow;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
   }
 
   .close-btn {
