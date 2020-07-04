@@ -19,7 +19,6 @@ export class EdImageBreak extends LitElement {
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: 2rem;
           position: relative;
         }
         .backdrop {

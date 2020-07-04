@@ -8,7 +8,13 @@ export default css`
   .gallery {
     display: flex;
     flex-flow: row wrap;
-    padding: 2rem 4rem;
+    padding: 2rem 1rem;
+  }
+
+  @media (min-width: 600px) {
+    .gallery {
+      padding: 2rem 4rem;
+    }
   }
 
   .gallery-item {
@@ -89,28 +95,26 @@ export default css`
     align-items: center;
     height: 100%;
   }
+
   .modal-backdrop {
     position: absolute;
     width: 100vw;
     height: 100vh;
     background: black;
-    opacity: 0.4;
+    opacity: 0.6;
   }
 
   .modal-close-icon {
     position: absolute;
     top: 1rem;
-    right: 2rem;
-    width: 40px;
+    right: 1rem;
+    width: 2rem;
   }
 
   .modal-img {
     position: relative;
-    /* left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); */
-
     max-height: 80vh;
+    max-width: 90vw;
 
     border: 8px solid;
     border-radius: 8px;

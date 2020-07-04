@@ -11,11 +11,7 @@ export default css`
     margin-bottom: 0;
   }
 
-  section {
-    margin: 3rem 0;
-  }
-
-  .image-break-slot {
+  .just-giving {
     position: relative;
     background: #e6f8ff;
     width: 70vw;
@@ -26,9 +22,16 @@ export default css`
     flex-flow: column nowrap;
     align-items: center;
     box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    font-size: 1.25rem;
   }
 
-  .image-break-slot img {
+  @media (min-width: 600px) {
+    .just-giving {
+      font-size: 2rem;
+    }
+  }
+
+  .just-giving img {
     width: 20%;
     margin-top: 1rem;
   }

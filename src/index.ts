@@ -8,6 +8,7 @@ import './components/header/header';
 import './components/intro/intro';
 import './components/gallery/gallery';
 import './components/image-break';
+import './components/section-break/section-break';
 import './components/flash-card/flash-card';
 
 import image27 from './assets/pictures/27.jpg';
@@ -59,7 +60,7 @@ export class EdMain extends LitElement {
         </ed-image-break>
       </section>
 
-      <section></section>
+      <ed-section-break></ed-section-break>
 
       <section>
         <ed-image-break backgroundUrl="${story2.breaks[0].url}">
@@ -87,11 +88,11 @@ export class EdMain extends LitElement {
         </ed-image-break>
       </section>
 
-      <section></section>
+      <ed-section-break></ed-section-break>
 
       <section>
         <ed-image-break backgroundUrl="${image27}">
-          <div class="image-break-slot">
+          <div class="just-giving">
             <span>If these images have brought you any joy, click the <a href="">link</a> to donate.</span>
             <img src="${justGiving}" />
           </div>
