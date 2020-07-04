@@ -14,7 +14,7 @@ export class EdIntro extends LitElement {
           text-align: center;
           font-style: italic;
           position: relative;
-          background: var(--secondary-bg);
+          background: var(--primary-bg);
         }
 
         .intro-overlay {

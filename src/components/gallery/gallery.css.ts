@@ -48,7 +48,7 @@ export default css`
     font-size: 24px;
     padding: 0.5rem;
     text-align: center;
-    background: var(--secondary-bg);
+    background: var(--primary-bg);
   }
 
   @keyframes fadeIn {

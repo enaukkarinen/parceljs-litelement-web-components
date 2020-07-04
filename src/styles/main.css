@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway&display=swap&family=Material+Icons');
 
 :root {
-  --main-bg: #e5f8ff;
-  --secondary-bg: #ecfffc;
+  --primary-bg: #e5f8ff;
+  --secondary-bg: #ffedf1;
   --main-color:  #4450b0;
 }
 body {
   padding: 0;
   margin: 0;
   font-family: 'Indie Flower', cursive;
-  background: var(--main-bg);
+  background: var(--primary-bg);
   color: var(--main-color);
 }
 
