@@ -18,8 +18,7 @@ export default css`
     width: 100%;
     margin-bottom: 1.5rem;
 
-    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-      0px 1px 10px 0px rgba(0, 0, 0, 0.12), inset 0 -10px 10px -10px #000000;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
   }
 
   @media (min-width: 600px) {
@@ -81,7 +80,6 @@ export default css`
     margin: 4rem;
     padding: 2rem;
     background: floralwhite;
-
 
     img {
       max-width: 60%;

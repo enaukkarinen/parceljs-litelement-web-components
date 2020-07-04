@@ -18,7 +18,7 @@ import image31 from './assets/pictures/31.jpg';
 export const story2: Story = {
   breaks: [
     {
-      url: image5,
+      url: image22,
       text: `It was Christmas time and a friend's wife asked Tirveni's baa for sugar to make lots of a thick sweet
     drink. Later they noticed all of her friends' children running back and forward from the gate and the
     husband ironing outside with a coal iron and whistling with a big smile on his face. "Why are you all so
@@ -28,7 +28,7 @@ export const story2: Story = {
     together."`
     },
     {
-      url: image5,
+      url: image22,
       text: `
       Later that week a wealthy friend came to visit Tirveni and her Baa. She looked melancholy.
       "My parents are coming for Christmas, tell me where I am supposed to put them. " she sighed
@@ -39,7 +39,7 @@ export const story2: Story = {
      `
     },
     {
-      url: image5,
+      url: image22,
       text: `Baa looked at Tirveni and from that look she learnt the example to follow. Value those who love you. To be happy one can't ignore those who love you but can share a place and food.
       `
     }

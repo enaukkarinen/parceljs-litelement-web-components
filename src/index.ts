@@ -1,11 +1,14 @@
 import { LitElement, html, customElement, TemplateResult, css, CSSResult } from '@polymer/lit-element';
+import 'intersection-observer';
 
 import './styles/main.css';
 
+import styles from './index.css';
 import './components/header/header';
 import './components/intro/intro';
 import './components/gallery/gallery';
 import './components/image-break';
+import './components/flash-card/flash-card';
 
 import image27 from './assets/pictures/27.jpg';
 import justGiving from './assets/just-giving.png';
@@ -19,40 +22,7 @@ export class EdMain extends LitElement {
     '“Triveni’s unique and eclectic style pulls together strands from western and eastern movements to reflect a strong inner life experiencing the many faces of the world. In a resonant conversation with the natural world Triveni filters out the intense beauty of memories and nature.”';
 
   static get styles(): CSSResult[] {
-    return [
-      css`
-        :host {
-          display: block;
-        }
-
-        h1 {
-          text-align: center;
-          font-size: 2rem;
-          margin-bottom: 0;
-        }
-
-        section {
-          margin: 3rem 0;
-        }
-
-        .image-break-slot {
-          position: relative;
-          background: #e6f8ff;
-          width: 70vw;
-          padding: 1rem;
-          border-radius: 1rem;
-          text-align: center;
-          display: flex;
-          flex-flow: column nowrap;
-          align-items: center;
-        }
-
-        .image-break-slot img {
-          width: 20%;
-          margin-top: 1rem;
-        }
-      `
-    ];
+    return [styles];
   }
 
   render(): TemplateResult {
@@ -65,11 +35,7 @@ export class EdMain extends LitElement {
 
       <section>
         <ed-image-break backgroundUrl="${story1.breaks[0].url}">
-          <div class="image-break-slot">
-            <span>
-              ${story1.breaks[0].text}
-            </span>
-          </div>
+          <ed-flash-card message="${story1.breaks[0].text}"></ed-flash-card>
         </ed-image-break>
       </section>
 
@@ -79,11 +45,7 @@ export class EdMain extends LitElement {
 
       <section>
         <ed-image-break backgroundUrl="${story1.breaks[1].url}">
-          <div class="image-break-slot">
-            <span>
-              ${story1.breaks[1].text}
-            </span>
-          </div>
+          <ed-flash-card message="${story1.breaks[1].text}"></ed-flash-card>
         </ed-image-break>
       </section>
 
@@ -93,11 +55,7 @@ export class EdMain extends LitElement {
 
       <section>
         <ed-image-break backgroundUrl="${story1.breaks[2].url}">
-          <div class="image-break-slot">
-            <span>
-              ${story1.breaks[2].text}
-            </span>
-          </div>
+          <ed-flash-card message="${story1.breaks[2].text}"></ed-flash-card>
         </ed-image-break>
       </section>
 
@@ -105,11 +63,7 @@ export class EdMain extends LitElement {
 
       <section>
         <ed-image-break backgroundUrl="${story2.breaks[0].url}">
-          <div class="image-break-slot">
-            <span>
-              ${story2.breaks[0].text}
-            </span>
-          </div>
+          <ed-flash-card message="${story2.breaks[0].text}"></ed-flash-card>
         </ed-image-break>
       </section>
 
@@ -119,11 +73,7 @@ export class EdMain extends LitElement {
 
       <section>
         <ed-image-break backgroundUrl="${story2.breaks[1].url}">
-          <div class="image-break-slot">
-            <span>
-              ${story2.breaks[1].text}
-            </span>
-          </div>
+          <ed-flash-card message="${story2.breaks[1].text}"></ed-flash-card>
         </ed-image-break>
       </section>
 
@@ -133,11 +83,7 @@ export class EdMain extends LitElement {
 
       <section>
         <ed-image-break backgroundUrl="${story2.breaks[2].url}">
-          <div class="image-break-slot">
-            <span>
-              ${story2.breaks[2].text}
-            </span>
-          </div>
+          <ed-flash-card message="${story2.breaks[2].text}"></ed-flash-card>
         </ed-image-break>
       </section>
 
