@@ -19,8 +19,6 @@ import { story2 } from './story2';
 
 @customElement('ed-main')
 export class EdMain extends LitElement {
-  text1 =
-    '“Triveni’s unique and eclectic style pulls together strands from western and eastern movements to reflect a strong inner life experiencing the many faces of the world. In a resonant conversation with the natural world Triveni filters out the intense beauty of memories and nature.”';
 
   static get styles(): CSSResult[] {
     return [styles];

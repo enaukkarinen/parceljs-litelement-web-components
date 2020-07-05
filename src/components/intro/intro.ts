@@ -50,9 +50,9 @@ export class EdIntro extends LitElement {
       </style>
       <div class="intro-overlay"></div>
       <div class="intro-text">
-        “Triveni’s unique and eclectic style pulls together strands from western and eastern movements to reflect a
+        “Tirveni’s unique and eclectic style pulls together strands from western and eastern movements to reflect a
         strong inner life experiencing the many faces of the world. In a resonant conversation with the natural world
-        Triveni filters out the intense beauty of memories and nature.”
+        Tirveni filters out the intense beauty of memories and nature.”
       </div>
     `;
   }
