@@ -116,7 +116,7 @@ export class EdHeader extends LitElement {
           <div class="face-card__image-container">
             <img class="face-card__image" src="${profileImage}" />
           </div>
-          <div class="face-card__name">Tirveni</div>
+          <div class="face-card__name">Triveni</div>
         </div>
       </div>
     `;

@@ -24,7 +24,7 @@ export const story1: Story = {
   breaks: [
     {
       url: image33,
-      text: `Born in 1935, the oldest of 7 sisters, Tirveni spent a happy childhood in Kenya with her family, friends
+      text: `Born in 1935, the oldest of 7 sisters, Triveni spent a happy childhood in Kenya with her family, friends
       and little dog. When she was 4 her younger sister suffered from Polio. This left her sister unable to walk
       properly.`
     },

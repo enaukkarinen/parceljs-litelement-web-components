@@ -19,7 +19,7 @@ export const story2: Story = {
   breaks: [
     {
       url: image22,
-      text: `It was Christmas time and a friend's wife asked Tirveni's baa for sugar to make lots of a thick sweet
+      text: `It was Christmas time and a friend's wife asked Triveni's baa for sugar to make lots of a thick sweet
     drink. Later they noticed all of her friends' children running back and forward from the gate and the
     husband ironing outside with a coal iron and whistling with a big smile on his face. "Why are you all so
     happy?" Baa asked. The husband replied "My parents in law are coming for Christmas" "But where will they
@@ -30,7 +30,7 @@ export const story2: Story = {
     {
       url: image22,
       text: `
-      Later that week a wealthy friend came to visit Tirveni and her Baa. She looked melancholy.
+      Later that week a wealthy friend came to visit Triveni and her Baa. She looked melancholy.
       "My parents are coming for Christmas, tell me where I am supposed to put them. " she sighed
      Baa replied " You have 4 bedrooms, one playroom for your 2 boys, a conservatory and a reception room, you can find space".
      "No, I can't ask my boys to give up one of their rooms and their playroom can't have less toys.
@@ -40,7 +40,7 @@ export const story2: Story = {
     },
     {
       url: image22,
-      text: `Baa looked at Tirveni and from that look she learnt the example to follow. Value those who love you. To be happy one can't ignore those who love you but can share a place and food.
+      text: `Baa looked at Triveni and from that look she learnt the example to follow. Value those who love you. To be happy one can't ignore those who love you but can share a place and food.
       `
     }
   ],
