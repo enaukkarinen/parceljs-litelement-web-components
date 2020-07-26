@@ -19,6 +19,7 @@ import { story2 } from './story2';
 
 @customElement('ed-main')
 export class EdMain extends LitElement {
+
   static get styles(): CSSResult[] {
     return [styles];
   }
@@ -110,10 +111,7 @@ export class EdMain extends LitElement {
       <section>
         <ed-image-break backgroundUrl="${image27}">
           <div class="just-giving">
-            <span
-              >If these images have brought you any joy, click the
-              <a href="https://www.justgiving.com/fundraising/tara-raval" target="_blank">link</a> to donate.</span
-            >
+            <span>If these images have brought you any joy, click the <a href="https://www.justgiving.com/fundraising/tara-raval" target="_blank">link</a> to donate.</span>
             <img src="${justGiving}" />
           </div>
         </ed-image-break>
