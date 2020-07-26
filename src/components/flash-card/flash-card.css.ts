@@ -11,8 +11,8 @@ export default css`
     position: relative;
     font-size: 1.25rem;
     background: #e6f8ff;
-    width: calc(100vw - 4rem);
-    padding: 1rem;
+    width: calc(100vw - 6rem);
+    padding: 1.5rem 2rem;
     border-radius: 1rem;
     text-align: center;
     display: flex;

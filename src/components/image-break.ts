@@ -9,7 +9,7 @@ export class EdImageBreak extends LitElement {
       css`
         .image-break {
           width: 100%;
-          height: 800px;
+          height: 100vh;
           background-size: cover;
           background-attachment: fixed;
           background-position: center;

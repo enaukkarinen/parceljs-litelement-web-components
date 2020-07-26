@@ -24,20 +24,16 @@ export const story1: Story = {
   breaks: [
     {
       url: image33,
-      text: `Born in 1935, the oldest of 7 sisters, Triveni spent a happy childhood in Kenya with her family, friends
-      and little dog. When she was 4 her younger sister suffered from Polio. This left her sister unable to walk
-      properly.`
+      text: `When she was four, a close relative suffered from Polio, which left her unable to walk properly. At first she didn't even want to try to move around or walk. Triveni’s Baa (mother) told the sisters that they should do everything they could to help her. All of the sisters encouraged her to play and walk.`
     },
     {
       url: image33,
-      text: `At first she didn't even want to try to move around and walk. The Father told the other girls that it was
-      their job to help her. All of the other sisters encouraged her to walk.`
+      text: `No matter what the game, they would make sure she could play a part in it. They would play with her, holding her hands and singing songs together. They found that her warmth and affection heightened their own happiness and enjoyment. Everyone started to involve the little girl and as time went by, she became more motivated to walk.`
     },
     {
       url: image33,
-      text: `No matter what the game they would try to persuade her to join in. They would play with her, holdin her
-      hands. Everyone started to do it and as time went by she started to walk. Support and love can help us
-      overcome our difficulties and both the recipient and giver get joy out of it.`
+      text: `She went on to live a full life giving much joy to many others. Support and love can help us overcome our difficulties and both the recipient and giver get joy out of it.
+      `
     }
   ],
   galleries: [
