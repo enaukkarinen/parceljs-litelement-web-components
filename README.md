@@ -11,4 +11,4 @@ Run `npm run build` to build production version. The build artifacts will be sto
 
 ## Further help
 
-Check out the documentation for [Parcel.js](https://parceljs.org/).
+Check out the documentation for [Parcel.js](https://parceljs.org/) and [Workbox](https://developers.google.com/web/tools/workbox).
